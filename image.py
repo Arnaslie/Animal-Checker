@@ -1,0 +1,3 @@
+animal, 
+location,
+season
