@@ -1,6 +1,6 @@
 # 🦁 Animal Safety Checker
 
-An AI-powered application that helps you identify animals from photos and determine if they're dangerous in your specific location. Using the Perplexity Sonar API to capture real-time animal information, as information about animals can vary on current context (i.e. season of the year, current state of the location)
+An AI-powered application that helps you identify animals from photos and determine if they're dangerous in your specific location. Using the Perplexity Sonar API to capture real-time animal information, as information about animals can vary on current context (i.e. season of the year, current location)
 
 ## Features
 
