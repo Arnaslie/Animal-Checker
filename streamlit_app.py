@@ -39,8 +39,8 @@ with col2:
     
     # Location input
     location = st.text_input(
-        "Enter your current location (country/region)",
-        placeholder="e.g., Kenya, California, Australia",
+        "Enter your current location (country)",
+        placeholder="e.g., Kenya, US, Australia",
         help="This helps provide location-specific safety information"
     )
     
