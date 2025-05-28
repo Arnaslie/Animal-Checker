@@ -3,6 +3,7 @@ import torch
 from transformers import pipeline
 from PIL import Image
 import io
+from .sonar import realtime_request
 
 pipeline = pipeline(
     task="image-classification",
@@ -17,15 +18,12 @@ router = APIRouter(
     responses={404: {"description": "Not found"}},
 )
 
-def transformer(file: UploadFile):
-    return(pipeline(images=file))
-
 @router.get("/")
 def check_animal():
     return {'animal': 'dog'}
 
-@router.post("/file")
-async def inspect_image(file: UploadFile):
+@router.post("/file/{location}")
+async def inspect_image(file: UploadFile, location: str):
     try:
         request_object_content = await file.read()
         img = Image.open(io.BytesIO(request_object_content))
@@ -33,7 +31,8 @@ async def inspect_image(file: UploadFile):
         print(f"Image size: {img.size}")
         if pipeline is not None:
             scores = pipeline(images=img)
-            return scores
+            resp = realtime_request(scores[0]['label'], location)
+            return resp
         else:
             return 'no'
     except Exception as e:
