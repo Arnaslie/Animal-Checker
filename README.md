@@ -80,8 +80,7 @@ The FastAPI backend provides the following endpoints:
 │   ├── main.py              # FastAPI application
 │   ├── routers/
 │   │   ├── animal.py        # Animal identification endpoints
-│   │   └── sonar.py         # Perplexity AI integration
-│   └── dependencies.py
+│   │   └── sonar.py         # Perplexity AI 
 ├── streamlit_app.py         # Streamlit frontend
 ├── run_app.py              # Script to run both services
 ├── pyproject.toml          # Project dependencies
