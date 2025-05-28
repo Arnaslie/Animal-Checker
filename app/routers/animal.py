@@ -18,10 +18,6 @@ router = APIRouter(
     responses={404: {"description": "Not found"}},
 )
 
-@router.get("/")
-def check_animal():
-    return {'animal': 'dog'}
-
 @router.post("/file/{location}")
 async def inspect_image(file: UploadFile, location: str):
     try:

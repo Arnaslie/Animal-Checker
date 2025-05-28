@@ -62,7 +62,7 @@ Open your web browser and go to: http://localhost:8501
 ## How to Use
 
 1. **Upload an Image**: Click "Browse files" and select a clear photo of the animal
-2. **Enter Location**: Type your current country or region (e.g., "Kenya", "California", "Australia")
+2. **Enter Location**: Type your current country (e.g., "Kenya", "US", "Australia")
 3. **Analyze**: Click the "🔍 Analyze Animal" button
 4. **Get Results**: View the AI-powered safety assessment
 
@@ -71,7 +71,6 @@ Open your web browser and go to: http://localhost:8501
 The FastAPI backend provides the following endpoints:
 
 - `GET /` - Health check
-- `GET /animal/` - Test endpoint
 - `POST /animal/file/{location}` - Upload image and get safety analysis
 
 ## Project Structure
@@ -93,7 +92,7 @@ The FastAPI backend provides the following endpoints:
 
 - **Backend**: FastAPI, PyTorch, Transformers (Google ViT)
 - **Frontend**: Streamlit
-- **AI Services**: Perplexity AI (Sonar model)
+- **AI Services**: Perplexity Sonar AI
 - **Image Processing**: PIL (Pillow)
 
 ## Important Notes
