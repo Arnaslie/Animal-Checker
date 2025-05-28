@@ -33,6 +33,6 @@ def realtime_request(animal: str, location: str):
     }
 
     response = requests.request("POST", url, json=payload, headers=headers)
-
+    
     return response.json()['choices'][0]['message']['content']
     
